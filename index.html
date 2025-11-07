@@ -10,14 +10,14 @@
     <!-- Header med dropdown -->
     <header>
         <nav class="navbar">
-            <div class="dropdown">
-                <button class="dropbtn">Meny &#9662;</button>
-                <div class="dropdown-content">
-                    <a href="index.html">Hem</a>
-                    <a href="omOss.html">Om oss</a>
-                    <a href="tjanster.html">Tjänster</a>
-                    <a href="kontakt.html">Kontakt</a>
-                </div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776; <!-- Hamburger-ikon -->
+            </div>
+            <div class="dropdown-content" id="dropdownMenu">
+                <a href="index.html">Hem</a>
+                <a href="#">Om oss</a>
+                <a href="#">Tjänster</a>
+                <a href="contact.html">Kontakt</a>
             </div>
         </nav>
     </header>
@@ -26,7 +26,7 @@
     <main>
         <section class="hero">
             <h1>Välkommen till vår webbplats!</h1>
-            <p>Detta är en responsiv sida med en dropdown-meny och en standardfooter.</p>
+            <p>Detta är en responsiv sida med en dropdown-ikon och footer.</p>
         </section>
     </main>
 
@@ -34,5 +34,22 @@
     <footer>
         <p>&copy; 2025 Ditt Företagsnamn. Alla rättigheter reserverade.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('show');
+        }
+
+        <!-- Stäng menyn om användaren klickar utanför-->
+        window.onclick = function(event) {
+            if (!event.target.matches('.menu-icon')) {
+                const menu = document.getElementById('dropdownMenu');
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                }
+            }
+        }
+    </script>
 </body>
 </html>
