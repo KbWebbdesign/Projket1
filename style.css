@@ -220,3 +220,44 @@ footer {
         border-radius: 8px;
     }
 }
+/* === Tjänster & Priser sektion === */
+.services-section {
+    display: flex;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: rgba(230, 214, 240, 0.2); /* Ljus lila, lite genomskinlig */
+}
+
+.services-container {
+    max-width: 800px;
+    text-align: center;
+    background: rgba(40, 26, 61, 0.7); /* Matchar kontakt-hero */
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 40px rgba(0,0,0,0.4);
+}
+
+.services-container h2 {
+    font-family: 'Playfair Display', serif;
+    color: #e9ddff;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.services-container p {
+    color: #bca9ff;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.services-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.services-container li {
+    margin: 12px 0;
+    font-size: 1rem;
+    color: #fff;
+}
