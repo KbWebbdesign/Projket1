@@ -1,4 +1,4 @@
-/* === Fonts === */
+1* === Fonts === */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
 
 /* === Grund === */
@@ -260,4 +260,31 @@ footer {
     margin: 12px 0;
     font-size: 1rem;
     color: #fff;
+}
+/* === Mobile-friendly Tjänster & Priser === */
+@media (max-width: 700px) {
+    .services-section {
+        padding: 40px 15px; /* Mindre padding på små skärmar */
+    }
+
+    .services-container {
+        padding: 25px 20px;
+        max-width: 100%;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .services-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .services-container p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .services-container ul li {
+        font-size: 0.95rem;
+        margin: 10px 0;
+        line-height: 1.5;
+    }
 }
