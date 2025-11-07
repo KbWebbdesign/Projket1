@@ -23,12 +23,19 @@ body {
     position: relative;
 }
 
+.menu-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
 .brand {
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
 }
 
+/* Hamburgerikon */
 .menu-icon {
     font-size: 28px;
     color: white;
@@ -36,6 +43,7 @@ body {
     user-select: none;
 }
 
+/* Navigationslänkar (mobil) */
 .nav-links {
     list-style: none;
     display: none;
@@ -43,8 +51,9 @@ body {
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100%;
+    width: 200px;
     background-color: #0078d7;
+    border-radius: 0 0 8px 0;
 }
 
 .nav-links.active {
@@ -79,6 +88,60 @@ body {
     font-size: 1.2rem;
 }
 
+/* Kontaktformulär */
+.contact-hero {
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: left;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.contact-hero h1 {
+    text-align: center;
+    color: #0078d7;
+    margin-bottom: 20px;
+}
+
+.contact-hero p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #005fa3;
+}
+
 /* Footer */
 footer {
     background-color: #333;
@@ -99,9 +162,15 @@ footer {
         position: static;
         width: auto;
         background: none;
+        border: none;
     }
 
     .nav-links li a {
         padding: 10px 15px;
+    }
+
+    .nav-links li a:hover {
+        background-color: transparent;
+        text-decoration: underline;
     }
 }
