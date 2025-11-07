@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Clean Responsiv Sida</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header med dropdown -->
+    <header>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Meny &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="index.html">Hem</a>
+                    <a href="#">Om oss</a>
+                    <a href="#">Tjänster</a>
+                    <a href="contact.html">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Huvudinnehåll -->
+    <main>
+        <section class="contact-hero">
+            <h1>Kontakta oss</h1>
+            <p>Fyll i formuläret nedan så återkommer vi så snart som möjligt.</p>
+
+            <form class="contact-form" action="#" method="post">
+                <label for="name">Namn:</label>
+                <input type="text" id="name" name="name" placeholder="Ditt namn" required>
+
+                <label for="email">E-post:</label>
+                <input type="email" id="email" name="email" placeholder="din@email.com" required>
+
+                <label for="message">Meddelande:</label>
+                <textarea id="message" name="message" placeholder="Skriv ditt meddelande här..." rows="5" required></textarea>
+
+                <button type="submit">Skicka</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ditt Företagsnamn. Alla rättigheter reserverade.</p>
+    </footer>
+</body>
+</html>
