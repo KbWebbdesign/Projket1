@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt – Moonlight Tarot</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
@@ -30,7 +30,8 @@
             <h1>Kontakta mig</h1>
             <p>Har du frågor eller vill boka en tarotläsning? Skriv till mig här.</p>
 
-            <form class="contact-form" action="#" method="post">
+            <!-- Formspree-formulär -->
+            <form class="contact-form" action="https://formspree.io/f/xyzlggno" method="POST">
                 <label for="name">Namn</label>
                 <input type="text" id="name" name="name" placeholder="Ditt namn" required>
 
@@ -38,7 +39,7 @@
                 <input type="email" id="email" name="email" placeholder="din@email.com" required>
 
                 <label for="message">Meddelande</label>
-                <textarea id="message" name="message" placeholder="Skriv ditt meddelande här..." rows="5" required></textarea>
+                <textarea id="message" name="message" placeholder="Skriv ditt meddelande här..." required></textarea>
 
                 <button type="submit">Skicka meddelande</button>
             </form>
@@ -58,4 +59,3 @@
     </script>
 </body>
 </html>
-
