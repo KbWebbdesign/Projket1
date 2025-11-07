@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clean Responsiv Sida</title>
+    <title>Startsida</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Header med dropdown -->
+    <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <div class="menu-icon" onclick="toggleMenu()">
-                &#9776; <!-- Hamburger-ikon -->
-            </div>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
             <div class="dropdown-content" id="dropdownMenu">
                 <a href="index.html">Hem</a>
                 <a href="#">Om oss</a>
@@ -22,11 +20,11 @@
         </nav>
     </header>
 
-    <!-- Huvudinnehåll -->
+    <!-- Innehåll -->
     <main>
         <section class="hero">
             <h1>Välkommen till vår webbplats!</h1>
-            <p>Detta är en responsiv sida med en dropdown-ikon och footer.</p>
+            <p>Detta är en responsiv startsida med hamburger-dropdown och footer.</p>
         </section>
     </main>
 
@@ -35,13 +33,12 @@
         <p>&copy; 2025 Ditt Företagsnamn. Alla rättigheter reserverade.</p>
     </footer>
 
+    <!-- Script för dropdown -->
     <script>
         function toggleMenu() {
-            const menu = document.getElementById('dropdownMenu');
-            menu.classList.toggle('show');
+            document.getElementById('dropdownMenu').classList.toggle('show');
         }
 
-        <!-- Stäng menyn om användaren klickar utanför-->
         window.onclick = function(event) {
             if (!event.target.matches('.menu-icon')) {
                 const menu = document.getElementById('dropdownMenu');
