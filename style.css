@@ -1,6 +1,7 @@
-/* === Grund === */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+/* === Fonts === */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap');
 
+/* === Grund === */
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +10,13 @@
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background: linear-gradient(135deg, #f5f7fa, #e4e7ec);
-    color: #1b1b1b;
+    font-family: 'Poppins', sans-serif;
+    color: #f5f3ff;
+    background: radial-gradient(circle at top, #2a1f3d, #120d1a 80%);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    overflow-x: hidden;
 }
 
 /* === Navbar === */
@@ -22,51 +24,41 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 40px;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(26, 18, 39, 0.8);
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    padding: 14px 30px;
     position: sticky;
     top: 0;
-    z-index: 100;
-}
-
-.menu-left {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    z-index: 10;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .brand {
-    color: #111;
+    font-family: 'Playfair Display', serif;
     font-size: 1.3rem;
+    color: #f1e5ff;
     font-weight: 600;
     letter-spacing: 0.5px;
 }
 
-/* === Hamburger === */
 .menu-icon {
-    font-size: 28px;
-    color: #111;
+    font-size: 26px;
+    color: #f1e5ff;
     cursor: pointer;
-    user-select: none;
 }
 
-/* === Menylänkar === */
 .nav-links {
     list-style: none;
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
-    left: 20px;
-    width: 240px;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(20px);
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    top: 60px;
+    left: 10px;
+    background: rgba(40, 26, 61, 0.95);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    width: 200px;
     opacity: 0;
     transform: translateY(-10px);
 }
@@ -78,110 +70,107 @@ body {
 }
 
 .nav-links li a {
-    color: #222;
+    color: #e7dcff;
     text-decoration: none;
     padding: 14px 20px;
     display: block;
-    font-weight: 500;
 }
 
-.nav-links li a:hover {
-    background-color: rgba(13, 110, 253, 0.08);
+.nav-links li a:hover, 
+.nav-links li a.active {
+    background-color: rgba(197, 159, 255, 0.2);
 }
 
 /* === Hero === */
 .hero {
-    flex: 1;
-    padding: 100px 20px;
     text-align: center;
-    background: linear-gradient(180deg, #ffffff, #f0f2f5);
-    color: #111;
+    padding: 100px 20px 80px;
+    background: radial-gradient(circle at center, rgba(197,159,255,0.15), transparent 70%);
 }
 
 .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 15px;
-    font-weight: 600;
-    letter-spacing: -0.5px;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6rem;
+    color: #f8f5ff;
+    margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    color: #555;
+    color: #c9bbf2;
+    font-size: 1.1rem;
     max-width: 600px;
-    margin: 0 auto 35px auto;
+    margin: 0 auto 40px;
 }
 
 .cta-btn {
-    background: linear-gradient(135deg, #111, #444);
-    color: white;
+    background: linear-gradient(135deg, #c59fff, #9c70ff);
+    color: #fff;
     border: none;
-    padding: 14px 36px;
-    border-radius: 50px;
+    padding: 12px 30px;
+    border-radius: 40px;
     font-size: 1rem;
     cursor: pointer;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    letter-spacing: 0.3px;
+    box-shadow: 0 0 15px rgba(197, 159, 255, 0.5);
+    transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 25px rgba(197, 159, 255, 0.8);
 }
 
 /* === Kontaktformulär === */
 .contact-hero {
     max-width: 600px;
-    margin: 80px auto;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 6px 40px rgba(0, 0, 0, 0.08);
+    margin: 60px auto;
+    background: rgba(40, 26, 61, 0.7);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 40px rgba(0,0,0,0.4);
 }
 
 .contact-hero h1 {
+    font-family: 'Playfair Display', serif;
     text-align: center;
-    color: #111;
+    color: #e9ddff;
     margin-bottom: 10px;
-    font-size: 2rem;
 }
 
 .contact-hero p {
     text-align: center;
-    color: #666;
+    color: #bca9ff;
     margin-bottom: 30px;
-    font-size: 1rem;
 }
 
 .contact-form label {
-    font-weight: 600;
-    color: #222;
+    font-weight: 500;
+    color: #d5c8ff;
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 5px;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 12px 14px;
+    padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.08);
+    color: #fff;
     font-size: 1rem;
-    background-color: #f9f9f9;
-    transition: all 0.2s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #111;
-    box-shadow: 0 0 6px rgba(17, 17, 17, 0.2);
+    border-color: #c59fff;
+    box-shadow: 0 0 6px rgba(197,159,255,0.5);
 }
 
 .contact-form button {
-    background: #111;
+    background: linear-gradient(135deg, #c59fff, #9c70ff);
     color: white;
     border: none;
     padding: 14px;
@@ -189,19 +178,17 @@ body {
     font-size: 1rem;
     border-radius: 10px;
     cursor: pointer;
-    letter-spacing: 0.3px;
+    font-weight: 500;
 }
 
 .contact-form button:hover {
-    background: #222;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 15px rgba(197,159,255,0.7);
 }
 
 /* === Footer === */
 footer {
-    background-color: #111;
-    color: #bbb;
+    background-color: rgba(26,18,39,0.9);
+    color: #b8a8dd;
     text-align: center;
     padding: 20px;
     font-size: 0.9rem;
@@ -217,20 +204,19 @@ footer {
         display: flex;
         flex-direction: row;
         position: static;
-        background: none;
         opacity: 1;
         transform: none;
-        width: auto;
+        background: none;
         box-shadow: none;
+        width: auto;
     }
 
     .nav-links li a {
-        padding: 10px 18px;
-        color: #111;
+        padding: 10px 15px;
     }
 
     .nav-links li a:hover {
-        background: rgba(0,0,0,0.05);
+        background: rgba(255,255,255,0.1);
         border-radius: 8px;
     }
 }

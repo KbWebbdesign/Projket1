@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Startsida</title>
+    <title>Moonlight Tarot</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navbar -->
@@ -14,33 +15,32 @@
                 <div class="menu-icon" id="menuIcon">&#9776;</div>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html" class="active">Hem</a></li>
-                    <li><a href="#">Om oss</a></li>
+                    <li><a href="#">Om mig</a></li>
                     <li><a href="#">Tjänster</a></li>
                     <li><a href="contact.html">Kontakt</a></li>
                 </ul>
             </div>
-            <div class="brand">Valbo Vision</div>
+            <div class="brand">🌙 Moonlight Tarot</div>
         </nav>
     </header>
 
-    <!-- Innehåll -->
+    <!-- Hero -->
     <main>
         <section class="hero">
-            <h1>Välkommen till Valbo Vision</h1>
-            <p>Vi bygger moderna webbupplevelser med stilren design och smart teknik.</p>
-            <button class="cta-btn">Läs mer</button>
+            <h1>Låt korten vägleda dig</h1>
+            <p>Utforska din inre värld genom ljuset av intuition och kosmisk energi.</p>
+            <button class="cta-btn">Boka en läsning</button>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Valbo Vision. Alla rättigheter reserverade.</p>
+        <p>&copy; 2025 Moonlight Tarot • All rights reserved</p>
     </footer>
 
     <script>
         const menuIcon = document.getElementById('menuIcon');
         const navLinks = document.getElementById('navLinks');
-
         menuIcon.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
