@@ -1,0 +1,36 @@
+/* Grundläggande stilmall för din GitHub Pages-sida */
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(to bottom right, #e0f7fa, #fff);
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding-top: 80px;
+}
+
+h1 {
+    color: #0078d7;
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+button {
+    background-color: #0078d7;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #005fa3;
+}
+
