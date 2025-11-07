@@ -3,23 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Most Wanted Valbo!</title>
-
-    <!-- 🔗 Länk till din CSS-fil -->
+    <title>Clean Responsiv Sida</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Most Wanted Valbo!</h1>
+    <!-- Header med dropdown -->
+    <header>
+        <nav class="navbar">
+            <div class="dropdown">
+                <button class="dropbtn">Meny &#9662;</button>
+                <div class="dropdown-content">
+                    <a href="#">Hem</a>
+                    <a href="#">Om oss</a>
+                    <a href="#">Tjänster</a>
+                    <a href="#">Kontakt</a>
+                </div>
+            </div>
+        </nav>
+    </header>
 
-    <p>
-        Vi söker just nu efter denna man som har terroriserat Valbo under natten till Halloween.<br>
-        <strong>Namn:</strong> Ali Andersson<br>
-        <strong>Ålder:</strong> UNKNOWN<br>
-        <strong>BOUNTY REWARD:</strong> 3 euro<br>
-        <strong>Religion:</strong> Tillhör jehovas vittnen. 
+    <!-- Huvudinnehåll -->
+    <main>
+        <section class="hero">
+            <h1>Välkommen till vår webbplats!</h1>
+            <p>Detta är en responsiv sida med en dropdown-meny och en standardfooter.</p>
+        </section>
+    </main>
 
-    </p>
-<img src="images/image0.jpeg" alt="Ali Andersson" style="max-width: 400px; width: 80%; height: auto;">
-
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Ditt Företagsnamn. Alla rättigheter reserverade.</p>
+    </footer>
 </body>
 </html>

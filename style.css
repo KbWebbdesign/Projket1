@@ -1,36 +1,111 @@
-/* Grundläggande stilmall för din GitHub Pages-sida */
+/* Reset och grundstil */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: linear-gradient(to bottom right, #e0f7fa, #fff);
-    color: black;
-    text-align: center;
-    margin: 0;
-    padding-top: 80px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-h1 {
-    color: #0078d7;
-    font-size: 2.5rem;
+/* Navbar / Header */
+header {
+    background-color: #0078d7;
+    padding: 10px 20px;
 }
 
-p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
+.navbar {
+    display: flex;
+    align-items: center;
 }
 
-button {
-    background-color: #000000;
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    background-color: #0078d7;
     color: white;
+    padding: 10px 20px;
+    font-size: 16px;
     border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-button:hover {
+.dropbtn:hover {
     background-color: #005fa3;
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Huvudinnehåll */
+main {
+    flex: 1;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0078d7;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsiv design */
+@media (max-width: 600px) {
+    .dropbtn {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
