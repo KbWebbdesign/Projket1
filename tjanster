@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt – Moonlight Tarot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="menu-left">
+                <div class="menu-icon" id="menuIcon">&#9776;</div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="#">Om mig</a></li>
+                    <li><a href="tjänster.html">Tjänster</a></li>
+                    <li><a href="contact.html" class="active">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="brand">🌙 Moonlight Tarot</div>
+        </nav>
+    </header>
+
+
+    <footer>
+        <p>&copy; 2025 Moonlight Tarot • All rights reserved</p>
+    </footer>
+
+    <script>
+        const menuIcon = document.getElementById('menuIcon');
+        const navLinks = document.getElementById('navLinks');
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
