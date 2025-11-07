@@ -1,26 +1,31 @@
-/* Grundstil */
+/* === Grund === */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: all 0.3s ease;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f7f8fc;
+    color: #222;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Navbar */
+/* === Navbar === */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0078d7;
-    padding: 10px 20px;
-    position: relative;
+    padding: 12px 20px;
+    background: rgba(30, 30, 47, 0.8);
+    backdrop-filter: blur(10px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .menu-left {
@@ -31,11 +36,12 @@ body {
 
 .brand {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: bold;
+    letter-spacing: 0.5px;
 }
 
-/* Hamburgerikon */
+/* === Hamburger === */
 .menu-icon {
     font-size: 28px;
     color: white;
@@ -43,115 +49,157 @@ body {
     user-select: none;
 }
 
-/* Navigationslänkar (mobil) */
+/* === Menylänkar === */
 .nav-links {
     list-style: none;
     display: none;
     flex-direction: column;
     position: absolute;
     top: 60px;
-    left: 0;
-    width: 200px;
-    background-color: #0078d7;
-    border-radius: 0 0 8px 0;
+    left: 10px;
+    width: 220px;
+    background: rgba(13, 110, 253, 0.95);
+    border-radius: 8px;
+    overflow: hidden;
+    transform: translateY(-10px);
+    opacity: 0;
 }
 
 .nav-links.active {
     display: flex;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .nav-links li a {
     color: white;
     text-decoration: none;
-    padding: 15px 20px;
+    padding: 14px 20px;
     display: block;
+    font-weight: 500;
 }
 
 .nav-links li a:hover {
-    background-color: #005fa3;
+    background-color: #00b4d8;
 }
 
-/* Hero */
+.nav-links a.active {
+    background-color: #0056b3;
+}
+
+/* === Hero === */
 .hero {
     flex: 1;
-    padding: 40px 20px;
+    padding: 80px 20px;
     text-align: center;
+    background: linear-gradient(to right, #0d6efd, #00b4d8);
+    color: white;
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
 }
 
 .hero h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #0078d7;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
 }
 
 .hero p {
     font-size: 1.2rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
 }
 
-/* Kontaktformulär */
+.cta-btn {
+    background-color: white;
+    color: #0d6efd;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+    background-color: #00b4d8;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* === Kontaktformulär === */
 .contact-hero {
     max-width: 600px;
-    margin: 40px auto;
-    text-align: left;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    margin: 60px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
 }
 
 .contact-hero h1 {
     text-align: center;
-    color: #0078d7;
-    margin-bottom: 20px;
+    color: #0d6efd;
+    margin-bottom: 15px;
 }
 
 .contact-hero p {
     text-align: center;
+    color: #555;
     margin-bottom: 30px;
 }
 
 .contact-form label {
+    font-weight: 600;
+    color: #333;
     display: block;
     margin-bottom: 5px;
-    font-weight: bold;
 }
 
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     font-size: 1rem;
+    background-color: #f8f9fc;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #0d6efd;
+    box-shadow: 0 0 4px rgba(13, 110, 253, 0.4);
 }
 
 .contact-form button {
-    background-color: #0078d7;
+    background: #0d6efd;
     color: white;
     border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
+    padding: 14px;
     width: 100%;
-    transition: background-color 0.3s;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
 }
 
 .contact-form button:hover {
-    background-color: #005fa3;
+    background: #00b4d8;
+    box-shadow: 0 0 8px rgba(0,180,216,0.5);
 }
 
-/* Footer */
+/* === Footer === */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: #1e1e2f;
+    color: #bbb;
     text-align: center;
     padding: 20px;
+    font-size: 0.9rem;
 }
 
-/* Desktop */
-@media (min-width: 600px) {
+/* === Desktop === */
+@media (min-width: 700px) {
     .menu-icon {
         display: none;
     }
@@ -160,17 +208,18 @@ footer {
         display: flex;
         flex-direction: row;
         position: static;
+        background: transparent;
+        opacity: 1;
+        transform: none;
         width: auto;
-        background: none;
-        border: none;
     }
 
     .nav-links li a {
         padding: 10px 15px;
+        color: white;
     }
 
     .nav-links li a:hover {
-        background-color: transparent;
-        text-decoration: underline;
+        background: rgba(255,255,255,0.15);
     }
 }

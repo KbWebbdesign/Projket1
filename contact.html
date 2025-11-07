@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt</title>
+    <title>Kontakt - Valbo Vision</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,10 +16,10 @@
                     <li><a href="index.html">Hem</a></li>
                     <li><a href="#">Om oss</a></li>
                     <li><a href="#">Tjänster</a></li>
-                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="contact.html" class="active">Kontakt</a></li>
                 </ul>
             </div>
-            <div class="brand">Mitt Företag</div>
+            <div class="brand">Valbo Vision</div>
         </nav>
     </header>
 
@@ -27,33 +27,30 @@
     <main>
         <section class="contact-hero">
             <h1>Kontakta oss</h1>
-            <p>Fyll i formuläret nedan så återkommer vi så snart som möjligt.</p>
+            <p>Har du frågor eller vill samarbeta? Skicka ett meddelande!</p>
 
             <form class="contact-form" action="#" method="post">
-                <label for="name">Namn:</label>
+                <label for="name">Namn</label>
                 <input type="text" id="name" name="name" placeholder="Ditt namn" required>
 
-                <label for="email">E-post:</label>
+                <label for="email">E-post</label>
                 <input type="email" id="email" name="email" placeholder="din@email.com" required>
 
-                <label for="message">Meddelande:</label>
+                <label for="message">Meddelande</label>
                 <textarea id="message" name="message" placeholder="Skriv ditt meddelande här..." rows="5" required></textarea>
 
-                <button type="submit">Skicka</button>
+                <button type="submit">Skicka meddelande</button>
             </form>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Ditt Företagsnamn. Alla rättigheter reserverade.</p>
+        <p>&copy; 2025 Valbo Vision. Alla rättigheter reserverade.</p>
     </footer>
 
-    <!-- Script -->
     <script>
         const menuIcon = document.getElementById('menuIcon');
         const navLinks = document.getElementById('navLinks');
-
         menuIcon.addEventListener('click', () => {
             navLinks.classList.toggle('active');
         });
