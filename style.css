@@ -15,9 +15,18 @@ body {
 
 /* Navbar */
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #0078d7;
     padding: 10px 20px;
     position: relative;
+}
+
+.brand {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .menu-icon {
@@ -27,105 +36,47 @@ body {
     user-select: none;
 }
 
-/* Dropdown-innehåll */
-.dropdown-content {
+.nav-links {
+    list-style: none;
     display: none;
+    flex-direction: column;
     position: absolute;
-    top: 50px;
+    top: 60px;
     left: 0;
-    background-color: white;
-    min-width: 150px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 6px;
+    width: 100%;
+    background-color: #0078d7;
 }
 
-.dropdown-content a {
-    display: block;
-    padding: 10px;
-    color: #333;
+.nav-links.active {
+    display: flex;
+}
+
+.nav-links li a {
+    color: white;
     text-decoration: none;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown-content.show {
+    padding: 15px 20px;
     display: block;
 }
 
-/* Hero / Startsida */
+.nav-links li a:hover {
+    background-color: #005fa3;
+}
+
+/* Hero */
 .hero {
     flex: 1;
     padding: 40px 20px;
-    background-color: #f9f9f9;
     text-align: center;
 }
 
 .hero h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 20px;
     color: #0078d7;
 }
 
 .hero p {
     font-size: 1.2rem;
-    color: #333;
-}
-
-/* Kontaktformulär */
-.contact-hero {
-    max-width: 600px;
-    margin: 40px auto;
-    text-align: left;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.contact-hero h1 {
-    text-align: center;
-    color: #0078d7;
-    margin-bottom: 20px;
-}
-
-.contact-hero p {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-}
-
-.contact-form button {
-    background-color: #0078d7;
-    color: white;
-    border: none;
-    padding: 12px 20px;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    width: 100%;
-    transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #005fa3;
 }
 
 /* Footer */
@@ -136,28 +87,21 @@ footer {
     padding: 20px;
 }
 
-/* Responsiv */
+/* Desktop */
 @media (min-width: 600px) {
     .menu-icon {
         display: none;
     }
 
-    .dropdown-content {
+    .nav-links {
         display: flex;
-        position: static;
-        background-color: transparent;
-        box-shadow: none;
         flex-direction: row;
-        gap: 20px;
+        position: static;
+        width: auto;
+        background: none;
     }
 
-    .dropdown-content a {
-        color: white;
-        padding: 0;
-    }
-
-    .dropdown-content a:hover {
-        text-decoration: underline;
-        background-color: transparent;
+    .nav-links li a {
+        padding: 10px 15px;
     }
 }

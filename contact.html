@@ -10,13 +10,14 @@
     <!-- Navbar -->
     <header>
         <nav class="navbar">
-            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
-            <div class="dropdown-content" id="dropdownMenu">
-                <a href="index.html">Hem</a>
-                <a href="#">Om oss</a>
-                <a href="#">Tjänster</a>
-                <a href="contact.html">Kontakt</a>
-            </div>
+            <div class="brand">Mitt Företag</div>
+            <div class="menu-icon" id="menuIcon">&#9776;</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="#">Om oss</a></li>
+                <li><a href="#">Tjänster</a></li>
+                <li><a href="contact.html">Kontakt</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -46,20 +47,14 @@
         <p>&copy; 2025 Ditt Företagsnamn. Alla rättigheter reserverade.</p>
     </footer>
 
-    <!-- Script för dropdown -->
+    <!-- Script för hamburger-meny -->
     <script>
-        function toggleMenu() {
-            document.getElementById('dropdownMenu').classList.toggle('show');
-        }
+        const menuIcon = document.getElementById('menuIcon');
+        const navLinks = document.getElementById('navLinks');
 
-        window.onclick = function(event) {
-            if (!event.target.matches('.menu-icon')) {
-                const menu = document.getElementById('dropdownMenu');
-                if (menu.classList.contains('show')) {
-                    menu.classList.remove('show');
-                }
-            }
-        }
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
     </script>
 </body>
 </html>
